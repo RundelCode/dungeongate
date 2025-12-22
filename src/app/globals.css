@@ -1,4 +1,43 @@
-*{
+* {
   padding: 0;
   margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  color: #FFFFFF;
+}
+
+h1, h3 {
+  font-family: var(--font-bjorke), sans-serif;
+  font-weight: 100;
+  color: #BE8D52;
+}
+
+button {
+  font-family: var(--font-bjorke), sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: #000000;
+  background-color: #BE8D52;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s;
+  padding-bottom: 0px;
+  width: 200px;
+  height: 50px;
+}
+
+button:hover {
+  background-color: #9e723d;
+  transition: .2s;
+}
+
+
+
+p {
+  font-size: xx-small;
+  font-weight: 200;
 }
