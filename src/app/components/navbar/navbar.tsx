@@ -26,8 +26,8 @@ export default function Navbar({ }: Props) {
       </div>
 
       <ul>
-        <li><a href="/dashboard">Inicio</a></li>
-        <li><a href="/dashboard">Partidas</a></li>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/games">Partidas</a></li>
         <li><a href="#">Personajes</a></li>
         <li><a href="#">Recursos</a></li>
         <li><a href="#">Compendio</a></li>

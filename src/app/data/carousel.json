@@ -1,0 +1,62 @@
+[
+  {
+    "src": "/carousel/scene1.png",
+    "alt": "Escena de combate",
+    "title": "Combate en tiempo real",
+    "description": "Gestiona turnos, iniciativa, daño y estados sin interrumpir la narrativa de la partida."
+  },
+  {
+    "src": "/carousel/scene2.png",
+    "alt": "Hechizos y magia",
+    "title": "Magia y condiciones",
+    "description": "Lanza hechizos, aplica efectos, salvaciones y controla la concentración de forma automática."
+  },
+  {
+    "src": "/carousel/scene3.png",
+    "alt": "Escenas de juego",
+    "title": "Escenas dinámicas",
+    "description": "Organiza la partida por escenas para mantener claro el estado del mundo y la historia."
+  },
+  {
+    "src": "/carousel/scene4.png",
+    "alt": "Actores en partida",
+    "title": "Actores en juego",
+    "description": "Personajes y monstruos existen como entidades vivas dentro de cada partida."
+  },
+  {
+    "src": "/carousel/scene5.png",
+    "alt": "Control del Dungeon Master",
+    "title": "Control total del DM",
+    "description": "El DM tiene el control absoluto sin que el sistema imponga reglas narrativas."
+  },
+  {
+    "src": "/carousel/scene6.png",
+    "alt": "Sincronización en tiempo real",
+    "title": "Tiempo real",
+    "description": "Todos los cambios se sincronizan instantáneamente para cada jugador en la partida."
+  },
+  {
+    "src": "/carousel/scene7.png",
+    "alt": "Gestión de condiciones",
+    "title": "Estados y condiciones",
+    "description": "Aplica, gestiona y elimina condiciones con duración por rondas automáticamente."
+  },
+  {
+    "src": "/carousel/scene8.png",
+    "alt": "Registro de eventos",
+    "title": "Historial de acciones",
+    "description": "Cada acción importante queda registrada para mantener coherencia en la sesión."
+  },
+  {
+    "src": "/carousel/scene9.png",
+    "alt": "Partidas persistentes",
+    "title": "Partidas persistentes",
+    "description": "Retoma tus partidas en cualquier momento con el estado guardado del mundo."
+  },
+  {
+    "src": "/carousel/scene10.png",
+    "alt": "Filosofía de Dungeon Gate",
+    "title": "La historia es humana",
+    "description": "Dungeon Gate no reemplaza el rol, solo automatiza lo mecánico para que la historia fluya."
+  }
+]
