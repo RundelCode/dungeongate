@@ -22,7 +22,7 @@ export default function Page({ }: Props) {
         try {
             const data = await loginWithEmail(email, password)
             useSessionStore.getState().setSession(data.session)
-            router.push('/dashboard')
+            router.push('/')
         } catch (err: any) {
             alert(err.message)
         }

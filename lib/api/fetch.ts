@@ -1,17 +1,27 @@
-import { useSessionStore } from '../../stores/session.store'
+import { getAuthToken } from '../auth/cookies'
 
-export async function apiFetch(
+export async function apiFetch<T>(
     path: string,
-    options: RequestInit = {},
-) {
-    const token = useSessionStore.getState().accessToken
+    options?: RequestInit
+): Promise<T> {
+    const token = getAuthToken()
 
-    return fetch(`${process.env.NEXT_PUBLIC_API_URL}${path}`, {
-        ...options,
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-            ...options.headers,
-        },
-    })
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}${path}`,
+        {
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...(token && {
+                    Authorization: `Bearer ${token}`,
+                }),
+            },
+        }
+    )
+
+    if (!res.ok) {
+        throw new Error('API error')
+    }
+
+    return res.json()
 }
