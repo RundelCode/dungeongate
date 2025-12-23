@@ -1,6 +1,6 @@
 
 import { supabase } from './client'
-import { setAuthCookies } from '../auth/cookies'
+import { clearAuthCookies, setAuthCookies } from '../auth/cookies'
 
 export async function loginWithEmail(
     email: string,
@@ -55,5 +55,13 @@ export async function loginWithGoogle() {
     })
 
     if (error) throw error
+}
+
+export async function logout() {
+    const { error } = await supabase.auth.signOut()
+
+    if (error) throw error
+
+    clearAuthCookies()
 }
 

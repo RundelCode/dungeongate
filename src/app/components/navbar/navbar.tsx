@@ -6,6 +6,7 @@ import Logo from '../../../../public/icons/Logo.png'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../../../lib/supabase/client'
 import { useSessionStore } from '../../../../stores/session.store'
+import { logout } from '../../../../lib/supabase/auth'
 
 type Props = {}
 
@@ -13,10 +14,13 @@ export default function Navbar({ }: Props) {
   const router = useRouter()
   const clearSession = useSessionStore((state) => state.clear)
 
-  const logout = async () => {
-    await supabase.auth.signOut()
-    clearSession()
-    router.push('/login')
+  const handleLogout = async () => {
+    try {
+      await logout()
+      window.location.href = '/login'
+    } catch (err) {
+      console.error('Logout error:', err)
+    }
   }
 
   return (
@@ -35,7 +39,7 @@ export default function Navbar({ }: Props) {
       </ul>
 
       <div className={styles.buttonContainer}>
-        <button onClick={logout}>Cerrar sesión</button>
+        <button onClick={handleLogout}>Cerrar sesión</button>
       </div>
     </div>
   )

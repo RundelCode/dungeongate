@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Google from '../../../public/icons/google.png'
 import { useRouter } from 'next/navigation'
 import { loginWithEmail, loginWithGoogle } from '../../../lib/supabase/auth'
-import { useSessionStore } from '../../../stores/session.store'
 
 type Props = {}
 
@@ -20,13 +19,28 @@ export default function Page({ }: Props) {
         e.preventDefault()
 
         try {
-            const data = await loginWithEmail(email, password)
-            useSessionStore.getState().setSession(data.session)
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            })
+
+            if (!res.ok) {
+                const err = await res.json()
+                throw new Error(err.error || 'Error al iniciar sesión')
+            }
+
             router.push('/')
         } catch (err: any) {
             alert(err.message)
         }
     }
+
 
     const loginWithGoogleHandler = async () => {
         try {
