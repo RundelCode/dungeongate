@@ -212,7 +212,9 @@ export default function Page() {
                                 ))}
                             </div>
                         ) : (
-                            <p>No tienes partidas aún.</p>
+                            <div className={styles.empty}>
+                                <p>No tienes partidas aun.</p>
+                            </div>
                         )}
                     </>
                 )}

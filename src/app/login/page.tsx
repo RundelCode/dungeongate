@@ -103,7 +103,7 @@ export default function Page({ }: Props) {
                         <p>Recuérdame</p>
                     </div>
 
-                    <button type="submit">Iniciar sesión</button>
+                    <button type="submit">Iniciar sesion</button>
 
                     <p className={styles.redirect}>
                         ¿Aún no tienes una cuenta?{' '}

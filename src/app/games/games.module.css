@@ -362,3 +362,17 @@
 .modeCard.active strong {
   color: #131313;
 }
+
+
+.empty{
+  width: 100%;
+  height: 38vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty p{
+  font-size: 4rem;
+  font-family: var(--font-bjorke), sans-serif;
+}

@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DUNGEON GATE",
+  title: "Dungeon Gate",
   description: "Plataforma para crear partidas de Dungeons and Dragons de manera rapida e intuitiva",
 };
 
